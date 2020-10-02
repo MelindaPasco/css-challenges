@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+}
+.challenge {
+    display: inline-block;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 0;
+    margin-bottom: -4px;
+    align-content: center;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.material-icons {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: white;
+}
+
+.purple { background-color: mediumslateblue; }
+.green { background-color: lightseagreen; }
+.grey { background-color: #272C34; }
+.red { background-color: salmon;
+
+}
+
+#ch001_menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50px;
+    background: #20B2AA;
+    box-shadow:  20px 20px 60px #1b9791, 
+                 -20px -20px 60px #25cdc4;
+}
+#ch001_burger {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 5px 3px #1b9791,
+                0px -20px white,
+                2px -15px 3px #1b9791,
+                0px 20px white,
+                2px 25px 3px #1b9791;
+}
+
+#ch002 {
+    cursor: pointer;
+}
+#ch002_scene {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    background-color: lightblue;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+#ch002_ground {
+    position: absolute;
+    bottom: 0;
+    background-color: #F0DE75;
+    width: 200px;
+    height: 55px;
+}
+#ch002_pyramid_left {
+    position: absolute;
+    bottom: 55px;
+    left: 50px;
+    height: 55px;
+    width: 100px;
+    background-color: white;
+    clip-path: polygon(50% 0, 0 100%, 100% 100%);
+}
+#ch002_pyramid_right {
+    position: absolute;
+    bottom: 55px;
+    left: 49px;
+    height: 55px;
+    width: 102px;
+    background-color: lightgrey;
+    clip-path: polygon(50% 0, 63% 100%, 100% 100%);
+}
+#ch002_sun {
+    position: absolute;
+    top: 35px;
+	left: 85px;
+	width: 35px;
+	height: 35px;
+	border-radius: 50%;
+    background-color: yellow;
+    transform-origin: 50% 400%;
+}
+#ch002_shadow {
+    position: absolute;
+    top: 145px;
+    left: 50px;
+    background-color: goldenrod;
+    width: 100px;
+    height: 50px;
+    transform-origin: 50% 0%;
+    clip-path: polygon(70% 70%, 0 0, 100% 0);
+}
+#ch002:hover #ch002_scene {
+    animation: ch002-transition 7s infinite;
+}
+#ch002:hover #ch002_pyramid_left {
+    animation: ch002-shade 7s infinite;
+}
+#ch002:hover #ch002_pyramid_right {
+    animation: ch002-shade2 7s infinite;
+}
+#ch002:hover #ch002_sun {
+    animation: ch002-sun 7s infinite;
+}
+#ch002:hover #ch002_shadow {
+    animation: ch002-shadow 7s infinite;
+}
+@keyframes ch002-transition {
+    0% { opacity: 0; }
+    10% { opacity: 1; }
+    60% { opacity: 1; }
+    85% { opacity: 0; }
+    100% { opacity: 0; }
+}
+@keyframes ch002-sun {
+    0% {
+        background: orange;
+        transform: rotate(-70deg);
+    }
+    45% {
+        background: yellow;
+    } 
+    65% {
+        background: orange;
+    }
+    100% {
+        transform: rotate(75deg);
+    }
+}
+@keyframes ch002-shade {
+    0% {
+        background: lightgrey;
+    } 
+    25% {
+        background:white;
+    } 
+    45% {
+        background: lightgray;
+    }
+    100% {
+        background: gray;
+    }
+}
+@keyframes ch002-shade2 {
+    0% {
+        background:grey;
+    } 
+    25% {
+        background:lightgray;
+    } 
+    45% {
+        background:white;
+    }
+    100% {
+        background: lightgray;
+    }
+}
+@keyframes ch002-shadow {
+    0% {
+        left: 15px;
+        width: 170px;
+        clip-path: polygon(100% 46%, 21% 0, 81% 0);
+    }
+    5% {
+        left: 15px;
+        width: 170px;
+        clip-path: polygon(100% 46%, 21% 0, 81% 0);
+    }
+    100% {
+        left: 15px;
+        width: 170px;
+        clip-path: polygon(0 48%, 21% 0, 81% 0);
+    }
+}
