@@ -7,14 +7,24 @@
 
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
 </head>
 <body>
     <div id="ch001" class="challenge green">
-        <div id="ch001_menu"></div>
-        <div id="ch001_burger"></div>        
-    </div
-    ><div id="ch002" class="challenge grey">
         <div class="material-icons">mouse</div>
+        <div id="ch001_menu">
+            <div class="ch001_line1 ch001_default"></div>
+            <div class="ch001_line2 ch001_default"></div>
+            <div class="ch001_line3 ch001_default"></div>
+        </div>        
+    </div
+    ><div id="ch002" class="challenge">
+        <div class="material-icons">play_circle_filled</div>
         <div id="ch002_scene">
             <div id="ch002_pyramid_left"></div>
             <div id="ch002_pyramid_right"></div>
@@ -24,11 +34,16 @@
         </div>
     </div
     ><div id="ch003" class="challenge red">
-        
-
+        <div class="material-icons">play_circle_filled</div>
+        <div id="ch003_wrap">
+            <div id="ch003_circle1"></div>
+            <div id="ch003_circle2"></div>
+            <div id="ch003_circle3"></div>
+        </div>
     </div
-    ><div id="ch004" class="challenge">
-        
+    ><div id="ch004" class="challenge yellow">
+        <!-- <div class="material-icons">play_circle_filled</div> -->
+        <h3 id="CUN">Coming up next...</h3>
     </div
     ><div id="ch005" class="challenge">
         
@@ -43,5 +58,7 @@
         
     </div
     >
+
+    <script src= "script.js"></script>
 </body>
 </html>

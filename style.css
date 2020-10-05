@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: #272C34;
 }
 .challenge {
     display: inline-block;
@@ -18,14 +19,23 @@ body {
     right: 10px;
     color: white;
 }
-
-.purple { background-color: mediumslateblue; }
-.green { background-color: lightseagreen; }
-.grey { background-color: #272C34; }
-.red { background-color: salmon;
-
+#CUN {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 30px;
+    margin: 0;
 }
 
+.green { background-color: lightseagreen; }
+.red { background-color: salmon; }
+.purple { background-color: mediumslateblue; }
+.yellow { background-color: #EEBE6C; }
+
+/* Challenge 1 */
 #ch001_menu {
     position: absolute;
     top: 50%;
@@ -38,8 +48,28 @@ body {
     background: #20B2AA;
     box-shadow:  20px 20px 60px #1b9791, 
                  -20px -20px 60px #25cdc4;
+    cursor: pointer;
 }
-#ch001_burger {
+.ch001_default {
+    animation: none !important;
+}
+.ch001_line1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px -5px 6px #1b9791,
+                0px 5px 6px #1b9791;
+    cursor: pointer;
+    animation: ch001_line1-r .7s ease-in-out forwards;
+}
+.ch001_line2 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -49,13 +79,60 @@ body {
     height: 10px;
     background-color: white;
     border-radius: 10px;
-    box-shadow: 2px 5px 3px #1b9791,
-                0px -20px white,
-                2px -15px 3px #1b9791,
-                0px 20px white,
-                2px 25px 3px #1b9791;
+    box-shadow: 0px -5px 6px #1b9791,
+                0px 5px 6px #1b9791;
+    cursor: pointer;
+    animation: ch001_line2-r .7s ease-in-out forwards;
+}
+.ch001_line3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 20px;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 10px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0px -5px 6px #1b9791,
+                0px 5px 6px #1b9791;
+    cursor: pointer;
+    animation: ch001_line3-r .7s ease-in-out forwards;
+}
+@keyframes ch001_line1 {
+    0% { transform: translate3d(-50%, 0px, 1px); }
+    50% { transform: translate3d(-50%, 20px, 1px); }
+    100% { transform: translate3d(-50%, 20px, 1px) rotate(45deg); }
+}
+@keyframes ch001_line2 {
+    0% { transform:  translate3d(-50%, 0px, 0px) scalex(1); }
+    100% { transform: translate3d(-50%, 0px, 0px) scalex(0); }
+}
+@keyframes ch001_line3 {
+    0% { transform: translate3d(-50%, 0px, 2px); }
+    50% { transform: translate3d(-50%, -20px, 2px); }
+    100% { transform: translate3d(-50%, -20px, 2px) rotate(135deg); }
+}
+#ch001_menu.active .ch001_line1 { animation: ch001_line1 0.7s  forwards; }
+#ch001_menu.active .ch001_line2 { animation: ch001_line2 .5s forwards; }
+#ch001_menu.active .ch001_line3 { animation: ch001_line3 0.7s forwards; }
+@keyframes ch001_line1-r {
+    0% { transform:translate3d(-50%, 20px, 1px) rotate(45deg); }
+    50% { transform: translate3d(-50%, 20px, 1px); }
+    100% { transform: translate3d(-50%, 0px, 1px); }
+}
+@keyframes ch001_line2-r {
+    0% { transform: translate3d(-50%, 0px, 0px) scalex(0); }
+    100% { transform: translate3d(-50%, 0px, 0px) scalex(1); }
+}
+@keyframes ch001_line3-r {
+    0% { transform: translate3d(-50%, -20px, 2px) rotate(-45deg); }
+    50% { transform: translate3d(-50%, -20px, 2px); }
+    100% { transform: translate3d(-50%, 0px, 2px); }
 }
 
+/* Challenge 2 */
 #ch002 {
     cursor: pointer;
 }
@@ -133,10 +210,8 @@ body {
 }
 @keyframes ch002-transition {
     0% { opacity: 0; }
-    10% { opacity: 1; }
-    60% { opacity: 1; }
-    85% { opacity: 0; }
-    100% { opacity: 0; }
+    10%, 60% { opacity: 1; }
+    85%, 100% { opacity: 0; }
 }
 @keyframes ch002-sun {
     0% {
@@ -182,12 +257,7 @@ body {
     }
 }
 @keyframes ch002-shadow {
-    0% {
-        left: 15px;
-        width: 170px;
-        clip-path: polygon(100% 46%, 21% 0, 81% 0);
-    }
-    5% {
+    0%, 5% {
         left: 15px;
         width: 170px;
         clip-path: polygon(100% 46%, 21% 0, 81% 0);
@@ -198,3 +268,67 @@ body {
         clip-path: polygon(0 48%, 21% 0, 81% 0);
     }
 }
+
+/* Challenge 3 */
+#ch003 {
+    cursor: pointer;
+}
+#ch003_wrap {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+    transform: translate(-50%, -50%);
+    width: 150px;
+    height: 150px;
+}
+#ch003_circle1 {
+    position: absolute;
+	width: 150px;
+	height: 150px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+#ch003_circle2 {
+    position: absolute;
+	width: 100px;
+    height: 100px;
+    top: 25px;
+    left: 25px;
+    background-color:white;
+    border-radius: 50%;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+#ch003_circle3 {
+    position: absolute;
+	width: 50px;
+    height: 50px;
+    top: 50px;
+    left: 50px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.4);
+}
+#ch003:hover #ch003_circle1 { animation: ch003-c1 4s infinite alternate; }
+#ch003:hover #ch003_circle2 { animation: ch003-c2 4s infinite alternate; }
+#ch003:hover #ch003_circle3 { animation: ch003-c3 4s infinite alternate; }
+@keyframes ch003-c1 {
+	0%, 10% { transform: scale(0); }
+	100% { transform: scale(1); }
+}
+@keyframes ch003-c2 {
+	0%, 40% { transform: scale(0); }
+	100% { transform: scale(1); }
+}
+@keyframes ch003-c3 {
+	0%, 70% { transform: scale(0); }
+	100% { transform: scale(1); }
+}
+
+/* Challenge 4 */
+
+
+
+
+
