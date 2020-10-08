@@ -16,7 +16,7 @@
 </head>
 <body>
     <div id="ch001" class="challenge green">
-        <div class="material-icons">mouse</div>
+        <div class="material-icons interaction">mouse</div>
         <div id="ch001_menu">
             <div class="ch001_line1 ch001_default"></div>
             <div class="ch001_line2 ch001_default"></div>
@@ -24,7 +24,7 @@
         </div>        
     </div
     ><div id="ch002" class="challenge">
-        <div class="material-icons">play_circle_filled</div>
+        <div class="material-icons interaction">play_circle_filled</div>
         <div id="ch002_scene">
             <div id="ch002_pyramid_left"></div>
             <div id="ch002_pyramid_right"></div>
@@ -34,7 +34,7 @@
         </div>
     </div
     ><div id="ch003" class="challenge red">
-        <div class="material-icons">play_circle_filled</div>
+        <div class="material-icons interaction">play_circle_filled</div>
         <div id="ch003_wrap">
             <div id="ch003_circle1"></div>
             <div id="ch003_circle2"></div>
@@ -42,7 +42,7 @@
         </div>
     </div
     ><div id="ch004" class="challenge yellow">
-        <div class="material-icons">play_circle_filled</div>
+        <div class="material-icons interaction">play_circle_filled</div>
         <div id="ch004_wrap">
             <div id="ch004_circle1"></div>
             <div id="ch004_circle2"></div>
@@ -50,15 +50,47 @@
         </div>
     </div
     ><div id="ch005" class="challenge blue">
-        <div class="material-icons">mouse</div>
-        <h3 id="CUN">Coming up next...</h3>
+        <div class="material-icons interaction">mouse</div>
         <div id="ch005_box">
-            <div></div>
+            <div id="ch005_header">
+                <div id="ch005_menu" class="material-icons">menu</div>
+                <p>Notifications</p>
+                <div id="ch005_search" class="material-icons">search</div>
+                <input type="text" id="ch005_input" placeholder="Search...">
+            </div>
+            <div id="ch005_content">
+                <div class="ch005_notif"> 
+                    <div class="ch005_circle"></div>
+                    <span class="ch005_time">9:24 AM</span>
+                    <p class="ch005_what"><span class="ch005_user">John Walker</span> posted a photo on your wall.</p>
+                </div>
+
+                <div class="ch005_notif">
+                    <div class="ch005_circle"></div>
+                    <span class="ch005_time">8:19 AM</span>
+                    <p class="ch005_what"><span class="ch005_user">Alice Parker</span> commented your last post.</p>
+                </div>
+
+                <div class="ch005_notif">
+                    <div class="ch005_circle"></div>
+                    <span class="ch005_time">Yesterday</span>
+                    <p class="ch005_what"><span class="ch005_user">Luke Wayne</span> added you as friend.</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="ch005_sidepanel">
+            <div class="ch005_page">Dashboard</div>
+            <div class="ch005_page">Profile</div>
+            <div class="ch005_page active">Notifications</div>
+            <div class="ch005_page">Messages</div>
+            <div class="ch005_page">Settings</div>
         </div>
 
     </div
-    ><div id="ch006" class="challenge">
-        
+    ><div id="ch006" class="challenge black">
+        <h3 id="CUN">Coming up next...</h3>
+        <div class="material-icons interaction">play_circle_filled</div>
     </div
     ><div id="ch007" class="challenge">
         
