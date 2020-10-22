@@ -1,6 +1,7 @@
 body {
-    margin: 0;
+    margin: auto;
     background-color: #272C34;
+    text-align: center;
 }
 .challenge {
     display: inline-block;
@@ -18,6 +19,7 @@ body {
     bottom: 10px;
     right: 10px;
     color: white;
+    z-index: 99;
 }
 #CUN {
     position: relative;
@@ -440,8 +442,9 @@ body {
 }
 #ch005_content {
     overflow: auto;
-    height: 230px;
+    height: 220px;
     padding: 0px 10px 0px 10px;
+    text-align: left;
 }
 .ch005_notif {
     position: relative;
@@ -487,6 +490,7 @@ body {
     height: 200px;
     background-color:#3d6080;
     color: white;
+    text-align: left;
     border-radius: 3px;
     box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
     transition: all .3s ease-in-out;
@@ -505,3 +509,74 @@ body {
     background-color: #5F98CD;
     font-weight: bold;
 }
+
+/* Challenge 6 */
+#ch006_wrap {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100px;
+    width: 230px;
+    color: white;
+}
+#ch006_quote {
+    font-size: 22px;
+}
+.ch006_highlight {
+    position: relative;
+    display: inline-block;
+    background-color: grey;
+    padding: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.ch006_highlight:hover .ch006_info {
+    visibility: visible;
+    opacity: 1;
+    transform: translate3d(0,0,0);
+}
+.ch006_info {
+    box-sizing: border-box;
+    position: absolute;
+    bottom: 40px;
+    left: -25px;
+    display: block;
+    background: grey;
+    border-radius: 10px;
+    width: 150px;
+    font-size: 18px;
+    cursor: default;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow:  5px 5px 10px rgba(0, 0, 0, 0.4), 
+                 -5px 5px 10px rgba(0, 0, 0, 0.4);
+    transform: translate3d(0, -30px, 0);
+    transition: all .5s ease-out;
+}             
+.ch006_info:after {
+    position: absolute;
+    content: '';
+    width: 10px;
+    height: 10px;
+    transform: rotate(45deg);
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px;
+    background: grey;
+}    
+.ch006_title {
+    display: block;
+    background: #fff;
+    color:grey;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 10px 15px;
+    line-height: 16px;
+}
+.ch006_text {
+    display: block;
+    padding: 10px 12px;
+}
+
+/* Challenge 7 */
