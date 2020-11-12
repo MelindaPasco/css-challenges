@@ -734,3 +734,95 @@ body {
 }
 
 /* Challenge 8 */
+#ch008_wrap {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 210px;
+    width: 230px;
+    border-radius: 10px;
+    background-color: white;
+}
+#ch008_header {
+    padding: 15px;
+    color: grey;
+    border-bottom: 1px solid grey;
+}
+#ch008_progress {
+    background-color:  mediumseagreen;
+    width: 230px;
+	height: 2px;
+	top: 49px;
+	left: 0;
+    background: mediumseagreen;
+	transform: scaleX(0);
+	transform-origin: 0 0;
+}
+#ch008_progress.active {
+    transition: all 3s ease-out;
+    transform: scaleX(1);
+}
+#ch008_content {
+    position: relative;
+    border: 1px dashed grey;
+    display: inline-block;
+    width: 116px;
+    height: 85px;
+    margin: 10px;
+    overflow: hidden;
+}
+#ch008_content label {
+    display: inline-block;
+    width: 116px;
+    height: 85px;
+    cursor: pointer;
+}
+#ch008_content input[type="file"] {
+    display: none;
+}
+#ch008_drop, #ch008_done, #ch008_filename {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: gray;
+    z-index: -1;
+}
+#ch008_drop {
+    opacity: 1;
+}
+#ch008_load {
+    position: absolute;
+    top: 24.5px;
+    left: 41.5px;
+    z-index: -1;
+    opacity: 0;
+}
+#ch008_load.active {
+    opacity: 1;
+    animation: ch008-load 3.2s ease-in-out;
+}
+@keyframes ch008-load { 100% { transform: rotate(450deg); }}
+#ch008_done {
+    opacity: 0;
+}
+#ch008_done.active {
+    opacity: 1;
+}
+#ch008_button {
+    position: absolute;
+    bottom: 15px;
+    left: 55px;
+	width: 120px;
+	height: 40px;
+    color: white;
+	background: mediumseagreen;
+	border-radius: 3px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 14px;
+	box-shadow: 0 2px 0 0 darkgreen;
+	cursor: pointer;
+	transition: all .2s ease-in-out;
+}
