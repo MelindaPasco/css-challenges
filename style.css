@@ -38,6 +38,7 @@ body {
 .yellow { background-color: #EEBE6C; }
 .blue { background-color: #0b385e; }
 .white { background-color: white; }
+.red { background-color: rgb(151, 32, 32); }
 
 /* Challenge 1 */
 #ch001_menu {
@@ -825,4 +826,126 @@ body {
 	box-shadow: 0 2px 0 0 darkgreen;
 	cursor: pointer;
 	transition: all .2s ease-in-out;
+}
+
+/* Challenge 9 */
+#ch009_circle {
+    position: absolute;
+	width: 100px;
+	height: 100px;
+	top: 100px;
+	left: 100px;
+	background: white;
+    border-radius: 50%;
+}
+#ch009_octogone {
+    position: absolute;
+    width: 100px;
+	height: 100px;
+	top: 100px;
+	left: 100px;
+    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    background-color: white;
+    opacity: 0;
+}
+#ch009_triangle {
+    position: absolute;
+    width: 100px;
+	height: 100px;
+	top: 100px;
+	left: 100px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    background-color: white;
+    opacity: 0;
+}
+#ch009:hover #ch009_circle {
+    animation: ch009-circle 5s ease-in-out infinite;
+}
+#ch009:hover #ch009_octogone {
+    animation: ch009-octo 5s ease-in-out infinite;
+}
+#ch009:hover #ch009_triangle {
+    animation: ch009-triangle 5s ease-in-out infinite;
+}
+@keyframes ch009-circle {
+	0% {
+		transform: translate3d(0,-200px,0) scaleY(1.5);
+	}
+	10% {
+		transform: translate3d(0,50px,0) scaleY(0.5);
+	}
+	13% {
+		transform: translate3d(0,-30px,0) scaleY(1.3);
+	}
+	17% {
+		transform: translate3d(0,10px,0) scaleY(0.7);
+	}
+	20%, 23% {
+		transform: translate3d(0,0,0) scaleY(1);
+	}
+	27% {
+		transform: translate3d(0,0,0) scale(1.3);
+	}
+	33%,75% {
+		transform: translate3d(0,0,0) scale(0);
+	}
+	80% {
+		transform: translate3d(0,0,0) scale(1.3);
+	}
+	83% {
+		transform: translate3d(0,0,0) scale(0.7);
+	}
+	87%, 88% {
+		transform: translate3d(0,0,0) scale(1);
+	}
+	93% {
+		transform: translate3d(0,-30px,0) scaleY(0.7);
+	}
+	100% {
+		transform: translate3d(0,300px,0) scaleY(1.3);
+	}
+}
+@keyframes ch009-octo {
+	0%, 30% {
+        opacity: 1;
+		transform: translate3d(0,0,0) scale(0) rotate(22.5deg);
+	}
+	37% {
+		transform: translate3d(0,0,0) scale(1.3) rotate(22.5deg);
+	}
+	40% {
+		transform: translate3d(0,0,0) scale(0.7) rotate(22.5deg);
+	}
+	43%, 44% {
+		transform: translate3d(0,0,0) scale(1) rotate(22.5deg);
+	}
+	47% {
+		transform: translate3d(0,0,0) scale(1.3) rotate(22.5deg);
+	}
+	53%, 100% {
+        opacity: 1;
+		transform: translate3d(0,0,0) scale(0) rotate(22.5deg);
+	}
+}
+@keyframes ch009-triangle {
+	0%, 53% {
+        opacity: 1;
+		transform: translate3d(0,0,0) scale(0);
+	}
+	57% {
+		transform: translate3d(0,0,0) scale(1.3);
+	}
+	60% {
+		transform: translate3d(0,0,0) scale(0.7);
+	}
+	63%, 64% {
+		transform: translate3d(0,0,0) scale(1);
+	}
+	67% {
+		transform: translate3d(0,0,0) scale(1.3);
+	}
+	75%, 100% {
+        opacity: 1;
+		transform: translate3d(0,0,0) scale(0);
+	}
 }
