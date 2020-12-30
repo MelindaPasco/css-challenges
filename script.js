@@ -14,7 +14,7 @@ $('#ch005_menu').bind('click', function() {
     $('#ch005_sidepanel').toggleClass('active');
 });
 
-// Challenge 7 - Burger menu
+// Challenge 7 - Gallery
 $('.ch007_user').click(function() {
     let src = $(this).find("img").attr('src');
     let name = $(this).find("p").text();
