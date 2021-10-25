@@ -744,6 +744,7 @@ body {
     width: 230px;
     border-radius: 10px;
     background-color: white;
+    box-shadow: 10px 10px 15px 0 rgba(0,0,0,0.3);
 }
 #ch008_header {
     padding: 15px;
@@ -1038,3 +1039,35 @@ body {
 }
 
 /* Challenge 11 */
+#ch011_wrap {
+    position: relative;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+#ch011_header {
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+    font-family: "Open Sans", Helvetica, sans-serif;
+}
+#ch011_svg {
+    margin-left: 80px;
+}
+#ch011_progress {
+    stroke-linecap: round;
+    stroke-dasharray: 142;
+}
+#ch011_label {
+    color: white;
+    font-size: 26px;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    margin-top: -100px;
+    line-height: 0.7;
+}
+#ch011_label span {
+    color: #8fa0bf;
+    font-size: 14px;
+    font-family: "Open Sans", Helvetica, sans-serif;
+}
