@@ -1,5 +1,5 @@
 body {
-    margin: auto;
+    margin: 20px auto;
     background-color: #272C34;
     text-align: center;
 }
@@ -39,6 +39,22 @@ body {
 .blue { background-color: #0b385e; }
 .white { background-color: white; }
 .red { background-color: rgb(155, 49, 49); }
+
+/* Interaction Legend */
+#help  {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 99;
+    padding: 4px 10px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: left;
+    border-bottom-right-radius: 6px;
+}
+#help table td:nth-child(2){
+    padding: 0 25px 0 0;
+}
 
 /* Challenge 1 */
 #ch001_menu {
@@ -845,7 +861,7 @@ body {
 	height: 100px;
 	top: 100px;
 	left: 100px;
-    clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+    clip-path: polygon(30% 0%, 70% 0%, 101% 30%, 101% 70%, 70% 101%, 30% 101%, 0% 70%, 0% 30%);
     background-color: white;
     opacity: 0;
 }
@@ -855,7 +871,7 @@ body {
 	height: 100px;
 	top: 100px;
 	left: 100px;
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    clip-path: polygon(50% 0%, 0% 100%, 101% 101%);
     background-color: white;
     opacity: 0;
 }
@@ -1053,21 +1069,50 @@ body {
     font-family: "Open Sans", Helvetica, sans-serif;
 }
 #ch011_svg {
-    margin-left: 80px;
+    width: 135px;
+    height: 135px;
+    padding-top: 1px;
 }
 #ch011_progress {
     stroke-linecap: round;
-    stroke-dasharray: 142;
+    stroke-dasharray: 375;
+    stroke-dashoffset: 375;
+    transform-origin: 50% 50%;
+    transform: rotate(-90deg);
 }
 #ch011_label {
     color: white;
     font-size: 26px;
     font-family: "Open Sans", Helvetica, sans-serif;
-    margin-top: -100px;
+    margin-top: -90px;
     line-height: 0.7;
 }
 #ch011_label span {
     color: #8fa0bf;
     font-size: 14px;
     font-family: "Open Sans", Helvetica, sans-serif;
+}
+#ch011:hover #ch011_progress {
+    animation: ch011-progress 1.5s ease-out;
+    animation-fill-mode: forwards; 
+}
+@keyframes ch011-progress {
+    0% {
+        stroke-dashoffset: 375;
+    }
+    100% {
+        stroke-dashoffset: 70;
+    }
+}
+
+/* Challenge 12 */
+#ch012_wrap {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+}
+#ch012 {
+    display: none;
 }
