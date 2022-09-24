@@ -1108,11 +1108,149 @@ body {
 /* Challenge 12 */
 #ch012_wrap {
     position: relative;
-    top: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+    top: 48%;
     left: 50%;
     transform: translate(-50%, -50%);
-    border-radius: 10px;
+    font-family: 'Open Sans', Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
 }
-#ch012 {
-    display: none;
+#ch012_t1, #ch012_t3 {
+    margin: 6px;
+    opacity: 0;
 }
+#ch012_t2 {
+    font-weight: bold;
+    font-size: 34px;
+    margin: 6px;
+    opacity: 0;
+}
+#ch012_circle, #ch012_line, #ch012_line2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    background-color: white;
+}
+#ch012_circle {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+#ch012_line, #ch012_line2 {
+    height: 4px;
+    z-index: -1;
+}
+#ch012_top, #ch012_top2, #ch012_bot, #ch012_bot2 {
+    position: absolute;
+    background-color: white;
+    height: 4px;
+    width: 260px;
+    z-index: -1;
+}
+#ch012_top {
+    top: 14%;
+}
+#ch012_top2 {
+    top: calc(14% - 1px);
+}
+#ch012_bot {
+    bottom: 14%;
+}
+#ch012_bot2 {
+    bottom: calc(14% - 1px);
+}
+#ch012_line2, #ch012_top2, #ch012_bot2 {
+    background-color: salmon;
+    height: 6px;
+}
+#ch012_left, #ch012_right {
+    display: flex;
+    align-items: center;
+}
+#ch012_bracket_left, #ch012_bracket_right {
+    top: 10px;
+    background-color: #fff;
+    width: 4px;
+}
+#ch012_bracket_left {
+    left: 40px;
+}
+#ch012_bracket_right {
+    right: 40px;
+}
+@keyframes ch012-circle {
+    0% {
+         scale: 0.5;
+    }
+    25% {
+        scale: 1;
+    }
+    100% {
+        scale: 0;
+    }
+}
+@keyframes ch012-lines {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 260px;
+    }
+}
+@keyframes ch012-bracket {
+    0% {
+        height: 0%;
+    }
+    100% {
+        height: 72%
+    }
+}
+@keyframes ch012-reveal {
+    0% {
+        width: 260px;
+    }
+    100% {
+        width: 150px;
+    }
+}
+#ch012:hover #ch012_circle {
+    animation: ch012-circle 1s forwards;
+}
+#ch012:hover #ch012_line {
+    animation: ch012-lines 1.4s forwards;
+    animation-delay: 0.8s;
+}
+#ch012:hover #ch012_line2 {
+    animation: ch012-lines 1.4s forwards;
+    animation-delay: 1.6s;
+}
+#ch012:hover #ch012_bracket_left, #ch012:hover #ch012_bracket_right {
+    animation: ch012-bracket 1.7s forwards;
+    animation-delay: 2s;
+}
+#ch012:hover #ch012_t2 {
+    transition: opacity 1s linear;
+    opacity: 1;
+    transition-delay: 2s;
+}
+#ch012:hover #ch012_t2 {
+    transition: opacity 1s linear;
+    opacity: 1;
+    transition-delay: 2.5s;
+}
+#ch012:hover #ch012_t1, #ch012:hover #ch012_t3 {
+    transition: opacity 1s linear;
+    opacity: 1;
+    transition-delay: 3.5s;
+}
+#ch012:hover #ch012_top2, #ch012:hover #ch012_bot2 {
+    animation: ch012-reveal 0.5s forwards;
+    animation-delay: 3.5s;
+}
+
+/* Challenge 13 */
