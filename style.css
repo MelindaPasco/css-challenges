@@ -16,14 +16,6 @@ body {
   overflow: hidden;
 }
 
-.interaction {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  color: white;
-  z-index: 99;
-}
-
 #CUN {
   position: relative;
   top: 50%;
@@ -76,7 +68,15 @@ body {
   padding: 0 25px 0 0;
 }
 
-/* Challenge 1 */
+.interaction {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  color: white;
+  z-index: 99;
+}
+
+/* Challenges */
 #ch001 .ch001_default {
   -webkit-animation: none !important;
           animation: none !important;
@@ -274,7 +274,6 @@ body {
   }
 }
 
-/* Challenge 2 */
 #ch002 {
   cursor: pointer;
 }
@@ -494,7 +493,6 @@ body {
   }
 }
 
-/* Challenge 3 */
 #ch003 {
   cursor: pointer;
 }
@@ -595,7 +593,6 @@ body {
   }
 }
 
-/* Challenge 4 */
 #ch004 {
   cursor: pointer;
 }
@@ -641,7 +638,6 @@ body {
   transform: rotate(-360deg);
 }
 
-/* Challenge 5 */
 #ch005_box {
   position: absolute;
   top: 50%;
@@ -776,7 +772,6 @@ body {
   font-weight: bold;
 }
 
-/* Challenge 6 */
 #ch006_wrap {
   position: relative;
   top: 50%;
@@ -843,7 +838,6 @@ body {
   padding: 10px 12px;
 }
 
-/* Challenge 7 */
 #ch007_userlist {
   display: flex;
   flex-wrap: wrap;
@@ -998,7 +992,6 @@ body {
   transition: all 0.5s ease-in-out;
 }
 
-/* Challenge 8 */
 #ch008_wrap {
   position: relative;
   top: 50%;
@@ -1103,7 +1096,6 @@ body {
   transition: all 0.2s ease-in-out;
 }
 
-/* Challenge 9 */
 #ch009_circle {
   position: absolute;
   width: 100px;
@@ -1352,7 +1344,6 @@ body {
   }
 }
 
-/* Challenge 10 */
 #ch010_wrap {
   position: relative;
   top: 50%;
@@ -1386,7 +1377,7 @@ body {
   z-index: -1;
   top: -130px;
   left: 0;
-  height: 310px;
+  height: 300px;
   width: 300px;
   background-image: linear-gradient(to right, #69bff8, #79b3f4, #8aa7ec, #9a9ae1, #aa8fd8, #ba83ca, #c777b9);
   border-left: 300px solid #69bff8;
@@ -1412,7 +1403,6 @@ body {
   transform: translateX(-600px);
 }
 
-/* Challenge 11 */
 #ch011_wrap {
   position: relative;
   top: 35%;
@@ -1473,7 +1463,6 @@ body {
   }
 }
 
-/* Challenge 12 */
 #ch012_wrap {
   position: relative;
   display: flex;
@@ -1665,7 +1654,6 @@ body {
           animation-delay: 3.5s;
 }
 
-/* Challenge 13 */
 #ch013_wrap {
   position: relative;
   top: 50%;
@@ -1839,4 +1827,103 @@ body {
   }
 }
 
-/* Challenge 14 *//*# sourceMappingURL=style.css.map */
+#ch014_shape {
+  position: absolute;
+  top: 50px;
+  left: 50px;
+  background-color: #1b9791;
+  height: 200px;
+  width: 200px;
+  -webkit-clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+          clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+}
+#ch014_pin {
+  position: absolute;
+  top: 80px;
+  left: 125px;
+  width: 48px;
+  height: 72px;
+  transition: all 4s ease;
+}
+#ch014_pin-shadow {
+  position: absolute;
+  top: 160px;
+  left: 134px;
+  width: 30px;
+  height: 10px;
+  background: #126662;
+  border-radius: 50%;
+}
+#ch014_card {
+  position: relative;
+  width: 200px;
+  height: 120px;
+  top: 80px;
+  left: 50px;
+}
+#ch014_card-content {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+#ch014_card:hover #ch014_card-content {
+  transform: rotateY(180deg);
+}
+#ch014_card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  background-color: white;
+  color: #1b9791;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+#ch014_card-title {
+  font-weight: bold;
+  text-decoration: underline;
+}
+#ch014:hover #ch014_pin {
+  -webkit-animation: ch014marker 1s infinite alternate;
+          animation: ch014marker 1s infinite alternate;
+}
+#ch014:hover #ch014_pin-shadow {
+  -webkit-animation: ch014shadow 1s infinite alternate;
+          animation: ch014shadow 1s infinite alternate;
+}
+@-webkit-keyframes ch014shadow {
+  0% {
+    scale: 0.4;
+  }
+  100% {
+    scale: 1;
+  }
+}
+@keyframes ch014shadow {
+  0% {
+    scale: 0.4;
+  }
+  100% {
+    scale: 1;
+  }
+}
+@-webkit-keyframes ch014marker {
+  0% {
+    translate: 0 0px;
+  }
+  100% {
+    translate: 0 5px;
+  }
+}
+@keyframes ch014marker {
+  0% {
+    translate: 0 0px;
+  }
+  100% {
+    translate: 0 5px;
+  }
+}/*# sourceMappingURL=style.css.map */
