@@ -14,16 +14,17 @@ body {
     box-sizing: border-box;
     overflow: hidden;
 }
-#CUN {
-    position: relative;
+.centeredContent {
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+#CUN { // Coming up Next
     width: 150px;
     height: 30px;
     margin: 0;
     color: white;
-    z-index: 99;
 }
 .green { background-color: lightseagreen; }
 .orange { background-color: salmon; }
@@ -40,7 +41,7 @@ body {
     z-index: 99;
     padding: 4px 10px;
     color: white;
-    background-color: rgba(0, 0, 0, 0.8);
+    background-color: #242C34;
     text-align: left;
     border-bottom-right-radius: 6px;
 
@@ -301,10 +302,6 @@ body {
     cursor: pointer;
 
     &_wrap {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 150px;
         height: 150px;
     }
@@ -361,10 +358,6 @@ body {
     cursor: pointer;
 
     &_wrap {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 200px;
         height: 200px;
     }
@@ -553,9 +546,6 @@ body {
 
 #ch006 {
     &_wrap {
-        position: relative;
-        top: 50%;
-        left: 50%;
         transform: translate(-50%, -60%);
         height: 100px;
         width: 230px;
@@ -786,10 +776,6 @@ body {
 
 #ch008 {
     &_wrap {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         height: 210px;
         width: 230px;
         border-radius: 10px;
@@ -1044,10 +1030,7 @@ body {
 
 #ch010 {
     &_wrap {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        
     }
     input[type="radio"] {
         display:none;
@@ -1066,7 +1049,7 @@ body {
         &_choice {
             position: absolute;
             top: 5px;
-            left: 94px;
+            left: 5px;
             height: 28px;
             width: 28px;
             background-color: white;
@@ -1077,7 +1060,7 @@ body {
             position: absolute;
             z-index: -1;
             top: -130px;
-            left: 0;
+            left: -90px;
             height: 300px;
             width: 300px;
             background-image: linear-gradient( to right, #69bff8, #79b3f4, #8aa7ec, #9a9ae1, #aa8fd8,  #ba83ca, #c777b9 );
@@ -1115,10 +1098,6 @@ body {
 
 #ch011 {
     &_wrap {
-        position: relative;
-        top: 35%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         border-radius: 10px;
     }
     &_header {
@@ -1169,13 +1148,9 @@ body {
 
 #ch012 {
     &_wrap {
-        position: relative;
         display: flex;
         justify-content: space-around;
         align-items: stretch;
-        top: 48%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         font-family: 'Open Sans', Helvetica, sans-serif;
         font-size: 20px;
         color: white;
@@ -1190,6 +1165,7 @@ body {
         font-size: 34px;
         margin: 6px;
         opacity: 0;
+        width: 246px;
     }
     &_circle, &_line, &_line2 {
         position: absolute;
@@ -1322,10 +1298,6 @@ body {
 
 #ch013 {
     &_wrap {
-        position: relative;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
         width: 100%;
         height: 60px;
     }
@@ -1476,7 +1448,7 @@ body {
     &_card {
         position: relative;
         width: 200px; 
-        height: 120px;
+        height: 65px;
         top: 80px;
         left: 50px;
 
@@ -1488,9 +1460,6 @@ body {
             transition: transform 0.5s;
             transform-style: preserve-3d;
         }
-        &:hover #ch014_card-content {
-            transform: rotateY(180deg);
-        } 
         &-back {
             position: absolute;
             width: 100%;
@@ -1501,10 +1470,10 @@ body {
             color: #1b9791;
             border-radius: 10px;
             transform: rotateY(180deg);
+            padding: 6px;
         }
-        &-title {
-            font-weight: bold;
-            text-decoration: underline;
+        &-text {
+            margin: 0;
         }   
     }
     &:hover {
@@ -1514,6 +1483,10 @@ body {
         #ch014_pin-shadow {
             animation: ch014shadow 1s infinite alternate;
         }
+        #ch014_card-content {
+            transform: rotateY(180deg) !important;
+        }
+    
     }
     @keyframes ch014shadow {
         0% {scale: 0.4;}
