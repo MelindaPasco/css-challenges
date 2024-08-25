@@ -1425,7 +1425,14 @@ body {
         background-color: #1b9791;
         height: 200px;
         width: 200px;
-        clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
+        clip-path: polygon(
+            50% 0%,
+            100% 25%,
+            100% 75%,
+            50% 100%,
+            0% 75%,
+            0% 25%
+          );
     }
     &_pin {
         position: absolute;
@@ -1438,19 +1445,19 @@ body {
         &-shadow {
             position: absolute;
             top: 160px;
-            left: 134px;
-            width: 30px;
-            height: 10px;
+            left: 142px;
+            width: 14px;
+            height: 6px;
             background: #126662;
             border-radius: 50%;
         }
     }
     &_card {
         position: relative;
-        width: 200px; 
+        width: 100px; 
         height: 65px;
-        top: 80px;
-        left: 50px;
+        top: 70px;
+        left: 106px;
 
         &-content {
             position: relative;
@@ -1489,8 +1496,8 @@ body {
     
     }
     @keyframes ch014shadow {
-        0% {scale: 0.4;}
-        100% {scale: 1;}
+        0% {scale: 1;}
+        100% {scale: 1.6;}
     }
     @keyframes ch014marker {
         0% {translate: 0 0px;}
